@@ -1,0 +1,57 @@
+.fee-breakdown-summary {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.fee-items {
+    margin: 5px 0 0 0;
+    padding-left: 15px;
+}
+
+.fee-items li {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.fee-breakdown-details {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.fee-breakdown-details tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fee-breakdown-details td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+
+.fee-label {
+    text-align: left;
+    padding-right: 15px;
+    color: #666;
+}
+
+.fee-amount {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.fee-total-row {
+    border-top: 2px solid #333;
+}
+
+.fee-label-total {
+    text-align: left;
+    padding-right: 15px;
+    padding-top: 8px;
+}
+
+.fee-amount-total {
+    text-align: right;
+    padding-top: 8px;
+    white-space: nowrap;
+}

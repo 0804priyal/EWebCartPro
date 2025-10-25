@@ -1,0 +1,9 @@
+<div class="rx-prescription-box">
+    <div data-bind="visible: canVisibleCustomFeeBlock">
+        <div class="step-title" data-bind="i18n: 'US Tariff'" data-role="title">
+        </div>
+        <input type="checkbox" name="custom-fee" value="custom-fee" checked hidden />
+        <span data-bind="text: getFeeLabel()"></span>
+        <span data-bind="text: getFormattedPrice()" class="price" style="font-weight: 600"></span>
+    </div>
+</div>

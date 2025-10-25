@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="ken_save_custom_fee_in_quote" type="EWebCartPro\USTariffPlan\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+    </type>
+        <type name="Magento\Quote\Model\Quote\Address\ToOrder">
+            <plugin name="ewecart_ustariffplan_quote_to_order" type="EWebCartPro\USTariffPlan\Model\Quote\QuoteToOrder" />
+        </type>
+        
+        <type name="Magento\Quote\Model\Quote\Address\Total\Collector">
+            <arguments>
+                <argument name="collectors" xsi:type="array">
+                    <item name="us_tariff" xsi:type="object">EWebCartPro\USTariffPlan\Model\Quote\Address\Total\Fee</item>
+                </argument>
+            </arguments>
+        </type>
+</config>

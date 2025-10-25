@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_before">
+        <observer name="ewecart_ustariffplan_admin_order_place_before" instance="EWebCartPro\USTariffPlan\Observer\Adminhtml\AddFeeToAdminOrder" />
+    </event>
+    
+    <event name="admin_sales_order_create_process_data">
+        <observer name="ewebcart_ustariffplan_admin_order_process_data" instance="EWebCartPro\USTariffPlan\Observer\Adminhtml\AddFeeToAdminOrder" />
+    </event>
+    
+    <event name="sales_convert_quote_to_order">
+        <observer name="ewebcart_ustariffplan_quote_to_order" instance="EWebCartPro\USTariffPlan\Observer\Sales\OrderSaveAfter" />
+    </event>
+</config>

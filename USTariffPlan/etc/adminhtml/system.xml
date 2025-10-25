@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="tariffplan" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>US Duties and Tariffs</label>
+            <tab>sales</tab>
+            <resource>Magento_Catalog::config_catalog</resource>
+            <group id="tariffplanstatus" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Duties and Tariffs Configuration</label>
+                <field id="status" translate="label comment" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="content" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <depends>
+                    <field id="tariffplan/tariffplanstatus/status">1</field>
+                </depends>
+                <field id="name" translate="label comment" type="text" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs</label>                 
+                </field>
+                <field id="tariff_amount_india" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs for India</label>
+                    <comment>This value is applied in percentage terms for India.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_canada" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs for Canada</label>
+                    <comment>This value is applied in dollar.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_united_kingdom" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs for United Kingdom</label>
+                    <comment>This value is applied in dollar.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_turkey" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs amount for Turkey</label>
+                    <comment>This value is applied in percentage terms for Turkey.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_austrailla" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs amount for Austrailla</label>
+                    <comment>This value is applied in dollar.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_new_zealand" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs amount for New Zealand</label>
+                    <comment>This value is applied in dollar.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="tariff_amount_usa" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Duties and Tariffs amount for USA</label>
+                    <comment>This value is applied in dollar.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>   
+            </group>
+        </section>
+    </system>
+</config>
+
