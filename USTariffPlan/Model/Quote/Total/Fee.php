@@ -59,7 +59,7 @@ class Fee extends AbstractTotal
         $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
         $tariff_india = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_INDIA, $storeScope) ?: 0.0;
         $tariff_canada = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_CANADA, $storeScope) ?: 0.0;
-        $tariff_uk = (float)$this->helperData->getScopeConfig()->getValue(\TVEWebCartProB\USTariffPlan\Helper\Data::CONFIG_TARIFF_UNITED_KINGDOM, $storeScope) ?: 0.0;
+        $tariff_uk = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_UNITED_KINGDOM, $storeScope) ?: 0.0;
         $tariff_turkey = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_TURKEY, $storeScope) ?: 0.0;
         $tariff_austrailla = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_AUSTRAILLA, $storeScope) ?: 0.0;
         $tariff_newzealand = (float)$this->helperData->getScopeConfig()->getValue(\EWebCartPro\USTariffPlan\Helper\Data::CONFIG_TARIFF_NEW_ZEALAND, $storeScope) ?: 0.0;
